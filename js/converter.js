@@ -1,5 +1,3 @@
-let link = document.querySelector('#converter');
-
 function job() {
   let newObjectCurrent = {
     'RUB': '1',
@@ -41,13 +39,6 @@ function job() {
   }
 }
 
-setTimeout(() => {
-  job();  
-}, 1000);
+job();  
 
-link.onclick = function () {
-  setTimeout(() => {
-    job();  
-  }, 1000);
-}
  

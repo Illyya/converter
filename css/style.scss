@@ -4,39 +4,50 @@ body {
 
 .content {
   display: flex;
-  flex-direction: column;
-  align-items: center;  
+  justify-content: space-around;
 
-  ul {
-    display: flex;
-    list-style: none;
-
-    li {
-      margin-right: 10px;
-    }
+  &__convert {
+    
   }
+
+  &__table {}
 }
 
-table {
-  border-collapse: collapse;
-}
+.convert {  
 
-th,
-td {
-  padding: 10px 15px;
-  border: 1px solid #2e2e2e;
-}
+  &__content {
+    position: fixed;
+  }
 
-.convert {
-  
-  &__block {
+  &__top {
     margin-bottom: 20px;
   }
+  
+  &__bottom {}
 
-  &__select {}
+  &__select,
+  &__input,
+  &__result {
+    padding: 5px 10px;
+  }
 
-  &__input {}
+  &__select {
+  }
 
-  &__result {}
+  &__input {
+  }
+
+  &__result {
+  }
+}
+
+.table {
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 10px 15px;
+    border: 1px solid #2e2e2e;
+  }
 }
 

@@ -8,16 +8,108 @@
   <body>
 
     <div class="content">
-      <ul>
-        <li><a href="#converter" id="converter">Converter</a></li>
-        <li><a href="#current-rate" id="currentRate">Current rate</a></li>
-      </ul>
-      <div id="app"></div>
+      
+      <div class="content__convert convert">
+        <div class="convert__content">
+          <div class="convert__top">
+            <select class="convert__select" id="cur1">
+              <option>USD</option>
+              <option>RUB</option>
+              <option>AMD</option>
+              <option>AUD</option>
+              <option>AZN</option>
+              <option>BRL</option>
+              <option>BYN</option>
+              <option>CAD</option>
+              <option>CHF</option>
+              <option>CNY</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>EUR</option>
+              <option>GBP</option>
+              <option>HKD</option>
+              <option>HUF</option>
+              <option>INR</option>
+              <option>JPY</option>
+              <option>KGS</option>
+              <option>KRW</option>
+              <option>KZT</option>
+              <option>MDL</option>
+              <option>NOK</option>
+              <option>PLN</option>
+              <option>SEK</option>
+              <option>SGD</option>
+              <option>TJS</option>
+              <option>TMT</option>
+              <option>TRY</option>
+              <option>UAH</option>
+              <option>UZS</option>
+              <option>XDR</option>
+              <option>ZAR</option>
+            </select>
+            <input 
+              class="convert__input" 
+              type="number" 
+              id="val" 
+              placeholder="введите сумму..." 
+              min="0"
+            />
+          </div>
+          <div class="convert__bottom">
+            <select class="convert__select" id="cur2">
+              <option>RUB</option>
+              <option>AMD</option>
+              <option>AUD</option>
+              <option>AZN</option>
+              <option>BRL</option>
+              <option>BYN</option>
+              <option>CAD</option>
+              <option>CHF</option>
+              <option>CNY</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>EUR</option>
+              <option>GBP</option>
+              <option>HKD</option>
+              <option>HUF</option>
+              <option>INR</option>
+              <option>JPY</option>
+              <option>KGS</option>
+              <option>KRW</option>
+              <option>KZT</option>
+              <option>MDL</option>
+              <option>NOK</option>
+              <option>PLN</option>
+              <option>SEK</option>
+              <option>SGD</option>
+              <option>TJS</option>
+              <option>TMT</option>
+              <option>TRY</option>
+              <option>UAH</option>
+              <option>USD</option>
+              <option>UZS</option>
+              <option>XDR</option>
+              <option>ZAR</option>
+            </select>
+            <span class="convert__result">00,0000</span>
+          </div>
+        </div>
+      </div>
+
+      <table class="content__table table">
+        <thead>
+          <tr>
+            <th>CharCode</th>
+            <th>Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">          
+        </tbody>    
+      </table>
+
     </div>
     
-    <script src="js/route.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/converter.js" type="module"></script>
     <script src="js/table.js" type="module"></script>
   </body>
