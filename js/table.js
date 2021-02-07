@@ -1,11 +1,11 @@
 let table = document.querySelector('table');
+let tbody = document.getElementById('tbody');
 
-function buildingTable(data) { // построение таблицы
-  let tbody = document.querySelector('tbody');
-  let a = Object.values(data);
+function buildingTable(data) {
+  let arrayOfCurrencies = Object.values(data);
   
-  for (let i = 0; i < a.length; i++) { //создание строк
-    const dataUser = a[i],
+  for (let i = 0; i < arrayOfCurrencies.length; i++) { //создание строк
+    const currencyData = arrayOfCurrencies[i],
       tr = document.createElement('tr');
           
     for (let j = 0; j < 3; j++) { //создание ячеек внутри строк
@@ -13,15 +13,14 @@ function buildingTable(data) { // построение таблицы
 
       switch (j) {
         case 0:
-          td.textContent = dataUser.CharCode
+          td.textContent = currencyData.CharCode
           break;
         case 1:
-          td.textContent = dataUser.Name
+          td.textContent = currencyData.Name
           break;
         case 2:
-          td.textContent = `${dataUser.Value}${' р.'}`
-          break;
-      
+          td.textContent = `${currencyData.Value.toFixed(3)}${' р.'}`
+          break;      
         default:
           break;
       }

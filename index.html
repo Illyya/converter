@@ -3,95 +3,64 @@
   <head lang="en">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Converter</title>
+    <title>Currency converterer</title>
   </head>
   <body>
 
     <div class="content">
       
-      <div class="content__convert convert">
-        <div class="convert__content">
-          <div class="convert__top">
-            <select class="convert__select" id="cur1">
-              <option>USD</option>
-              <option>RUB</option>
-              <option>AMD</option>
-              <option>AUD</option>
-              <option>AZN</option>
-              <option>BRL</option>
-              <option>BYN</option>
-              <option>CAD</option>
-              <option>CHF</option>
-              <option>CNY</option>
-              <option>CZK</option>
-              <option>DKK</option>
-              <option>EUR</option>
-              <option>GBP</option>
-              <option>HKD</option>
-              <option>HUF</option>
-              <option>INR</option>
-              <option>JPY</option>
-              <option>KGS</option>
-              <option>KRW</option>
-              <option>KZT</option>
-              <option>MDL</option>
-              <option>NOK</option>
-              <option>PLN</option>
-              <option>SEK</option>
-              <option>SGD</option>
-              <option>TJS</option>
-              <option>TMT</option>
-              <option>TRY</option>
-              <option>UAH</option>
-              <option>UZS</option>
-              <option>XDR</option>
-              <option>ZAR</option>
-            </select>
+      <div class="content__converter converter">
+        <div class="converter__content">
+          <div class="converter__top">
+            
+            <ul class="converter__list-valute" id="list-valute-1">              
+              <li class="converter__valute">
+                <input 
+                  class="converter__input-checkbox" 
+                  type="radio" 
+                  name="valute1" 
+                  id="RUB1"
+                  value="RUB"
+                >
+                <label 
+                  class="converter__label"  
+                  for="RUB1"
+                >
+                  RUB
+                </label>
+              </li>
+            </ul>          
+  
             <input 
-              class="convert__input" 
+              class="converter__input" 
               type="number" 
-              id="val" 
+              id="inputValue" 
               placeholder="введите сумму..." 
               min="0"
             />
           </div>
-          <div class="convert__bottom">
-            <select class="convert__select" id="cur2">
-              <option>RUB</option>
-              <option>AMD</option>
-              <option>AUD</option>
-              <option>AZN</option>
-              <option>BRL</option>
-              <option>BYN</option>
-              <option>CAD</option>
-              <option>CHF</option>
-              <option>CNY</option>
-              <option>CZK</option>
-              <option>DKK</option>
-              <option>EUR</option>
-              <option>GBP</option>
-              <option>HKD</option>
-              <option>HUF</option>
-              <option>INR</option>
-              <option>JPY</option>
-              <option>KGS</option>
-              <option>KRW</option>
-              <option>KZT</option>
-              <option>MDL</option>
-              <option>NOK</option>
-              <option>PLN</option>
-              <option>SEK</option>
-              <option>SGD</option>
-              <option>TJS</option>
-              <option>TMT</option>
-              <option>TRY</option>
-              <option>UAH</option>
-              <option>USD</option>
-              <option>UZS</option>
-              <option>XDR</option>
-              <option>ZAR</option>
-            </select>
-            <span class="convert__result">00,0000</span>
+          <div class="converter__bottom">
+            <div class="converter__result">0</div>
+            
+            <ul class="converter__list-valute" id="list-valute-2">
+              <li class="converter__valute">
+                <input 
+                  class="converter__input-checkbox" 
+                  type="radio" 
+                  name="valute2" 
+                  id="RUB2"
+                  value="RUB"
+                  checked
+                >
+                <label 
+                  class="converter__label"  
+                  for="RUB2"
+                >
+                  RUB
+                </label>
+              </li>              
+            </ul>
+
           </div>
         </div>
       </div>
@@ -99,9 +68,9 @@
       <table class="content__table table">
         <thead>
           <tr>
-            <th>CharCode</th>
+            <th id="charCode">CharCode</th>
             <th>Name</th>
-            <th>Value</th>
+           <th>Value</th>
           </tr>
         </thead>
         <tbody id="tbody">          

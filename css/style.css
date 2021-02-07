@@ -1,5 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.2;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #3e6ce9;
 }
 
 .content {
@@ -10,16 +84,64 @@ body {
       justify-content: space-around;
 }
 
-.convert__content {
+.converter__content {
   position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.convert__top {
+.converter__top {
   margin-bottom: 20px;
 }
 
-.convert__select, .convert__input, .convert__result {
+.converter__select, .converter__input, .converter__result {
   padding: 5px 10px;
+}
+
+.converter__input {
+  width: 100%;
+}
+
+.converter__result {
+  width: 100%;
+  color: #3e6ce9;
+  background-color: white;
+}
+
+.converter__list-valute {
+  max-width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.converter__valute {
+  position: relative;
+  padding: 7px;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.converter__valute:hover {
+  -webkit-transform: translate(4px, -4px);
+          transform: translate(4px, -4px);
+  background-color: #1e54e5;
+  -webkit-box-shadow: -4px 4px 0 #ffffff;
+          box-shadow: -4px 4px 0 #ffffff;
+}
+
+.converter__input-checkbox {
+  display: none;
+}
+
+.converter__input-checkbox:checked + * {
+  color: yellow;
+}
+
+.converter__label {
+  cursor: pointer;
 }
 
 .table {
@@ -29,6 +151,6 @@ body {
 .table th,
 .table td {
   padding: 10px 15px;
-  border: 1px solid #2e2e2e;
+  border: 1px solid #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
